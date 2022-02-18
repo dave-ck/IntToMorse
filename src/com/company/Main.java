@@ -1,9 +1,5 @@
 package com.company;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class Main {
     static long[][] morseDigits;
 
