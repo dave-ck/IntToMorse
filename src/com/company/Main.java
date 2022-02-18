@@ -8,16 +8,11 @@ public class Main {
     static long[][] morseDigits;
 
     public static void main(String[] args) {
-        long DOT, DASH, AND, LETSEP, SPACE_EXTRA, ZERO;
-        DOT = 200;             // dot is one unit (here 100ms)
+        long DOT, DASH, AND;
+        DOT = 200;             // dot is one unit (here 200ms)
         DASH = 600;            // dash is 3 units
-        AND = 200;             // space between parts of the same letter is one unit
-        LETSEP = 600;          // space between letters is three units
-        SPACE_EXTRA = 800;     // space character is seven units (four more than the space between characters)
-        ZERO = 0;
+        AND = 200;             // space between parts of the same digit is one unit
 
-        // As py dict for formatting: {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--', 'Z': '--..', '0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.', '.': '.-.-.-', ',': '--..--', '?': '..--..', ':': '---...', "'": '.----.', '-': '-....-', '/': '-..-.', '(': '-.--.', ')': '-.--.-', '"': '.-..-.', '=': '-...-', '#': '........', '+': '.-.-.', '@': '.--.-.'}
-        // ABOVE IS MISSING SPACE
         morseDigits = new long[][]{  // time on, time off, time on, ..., time off, time on; always start & end with time ON
                 {AND, DASH, AND, DASH, AND, DASH, AND, DASH, AND, DASH},     // 0, AND,  index 35
                 {AND, DOT, AND, DASH, AND, DASH, AND, DASH, AND, DASH},      // 1, AND,  index 26
